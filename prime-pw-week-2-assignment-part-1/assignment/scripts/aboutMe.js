@@ -28,7 +28,7 @@ console.log(pets);
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!",
 // if it's not true, console log "How about we stay home?"
-let allowedPets = 5
+const allowedPets = 5
 phrase = adventurous ? "adventures are great!" : "How about we stay home"
   console.log(phrase);
 // 14 - Create a compound conditional: if luckyNumber is 2 and adventurous is true,
@@ -57,7 +57,28 @@ else if(pets>allowedPets){
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
+pets += 8;
+let mostPets;
 
+if(pets > friendsPets){
+  mostPets = pets;
+}
+else if(friendsPets > pets){
+  mostPets = friendsPets;
+}
+console.log(mostPets);
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
 
+switch (mostPets) {
+  case pets > friendsPets:
+  mostPets = pets;
+  break;
+  case friendsPets > pets:
+    break;
+}
+console.log(mostPets);
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+function findMostPets(){
+  return (pets > friendsPets ? mostPets = pets : mostPets = friendsPets)
+}
+console.log(mostPets);
